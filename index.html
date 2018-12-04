@@ -4,57 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Psychic-Game</title>
+  <link type="text/css" href="/assets/ccs/style.css">
 </head>
 
 <body>
 
   <div id="game">
-    <h1>You picked: <span id="user-choice">nothing</span></h1><br>
-    <h1>The Computer picked: <span id="comp-choice">nothing</span></h1><br>
-    <h1>Wins: <span id="wins">0</span></h1><br>
-    <h1>Losses: <span id="losses">0</span></h1><br>
-    <h1>Ties: <span id="ties">0</span></h1>
+    <h1>Guess what letter I'm thinking of</h1><br>
+    <h2>Wins: <span id="wins">0</span></h2><br>
+    <h2>Losses: <span id="losses">0</span></h2><br>
+    <h2>Guesses left: <span id="guesses left">9</span></h2><br>
+    <h2>Your Guesses So Far:<span id="guesses so far"></span></h2>
   </div>
 
-  <script type="text/javascript">
-    alert("Press r, p, or s to start playing")
-    var computerChoices = ['r', 'p', 's'];
-
-    var userChoice = document.getElementById("user-choice");
-    var compChoice = document.getElementById("comp-choice");
-    var textWins = document.getElementById("wins");
-    var textLosses = document.getElementById("losses");
-    var textTies = document.getElementById("ties");
-    var wins = 0;
-    var losses = 0;
-    var ties = 0;
-    // Whenever a key is pressed, alert "pressed a button".
-    document.onkeyup = function (event) {
-      userChoice.textContent = event.key;
-      compChoice.textContent = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-      
-      var isOption = computerChoices.indexOf(userChoice.textContent);
-      // wins, losses, ties
-      if (isOption === -1) {
-        alert("That is not an option!");
-      }
-      if (userChoice.textContent === compChoice.textContent) {
-        ties++;
-        textTies.textContent = ties;
-      } else if ((userChoice.textContent === "p" && compChoice.textContent === "r") ||
-        (userChoice.textContent === "s" && compChoice.textContent === "p") ||
-        (userChoice.textContent === "r" && compChoice.textContent === "s")) {
-        wins++;
-        textWins.textContent = wins;
-      } else if ((userChoice.textContent === "p" && compChoice.textContent === "s") ||
-        (userChoice.textContent === "s" && compChoice.textContent === "r") ||
-        (userChoice.textContent === "r" && compChoice.textContent === "p")) {
-        losses++;
-        textLosses.textContent = losses;
-      }
-
-      // alert("pressed a button");
-    };
+  <script type="text/javascript" src="assets/javascript/game.js">
   </script>
 
 </body>
@@ -62,6 +25,3 @@
 </html>
 
 
-
-Collapse 
-Message Input

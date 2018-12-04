@@ -1,0 +1,21 @@
+### Word Guess Game Pseudocode
+
+1. Items/columns
+    Wins
+    Losses
+    Guesses left
+    your guesses so far
+
+ 2. when user chooses a letter, if the computer chooses the same random letter, user Wins
+ 3. when user chooses a letter,  if the computer chooses a different random letter, user losses 
+
+4. Wins are equal to the number of times the user has guessed the letter correctly
+5. Losses are equal to the number of times the user has failed to guess the letter correctly after exhausting all guesess 
+
+6. Guesses Left are equal to the number of guesses the user has left, (this will update)
+
+7. Your Guesses So Far is the specific letters that the user typed. (Display these until the user either wins or loses.)
+
+9. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
+
+10. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
