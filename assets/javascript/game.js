@@ -16,6 +16,7 @@ console.log(compGuess);
 
 document.onkeyup = function (event) {
   var userGuess = event.key;
+  userGuess = userGuess.toLowerCase();
   userGuessSoFar.push(userGuess);
   if (guessesLeft > 0) {
     guessesLeft--;
